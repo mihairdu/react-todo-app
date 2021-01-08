@@ -3,22 +3,27 @@ import React from "react";
 const Todo = ({ text, todo, todos, setTodos }) => {
     //events
     const deleteHandler = () => {
-        setTodos(todos.filter(el => el.id !== todo.id));
+        setTodos(todos.filter((el) => el.id !== todo.id));
     };
     const completeHandler = () => {
-        setTodos(todos.map(item => {
-            if (item.id === todo.id) {
-                return {
-                    ...item, completed: !item.completed
+        setTodos(
+            todos.map((item) => {
+                if (item.id === todo.id) {
+                    return {
+                        ...item,
+                        completed: !item.completed,
+                    };
                 }
-            }
-            return item;
-        }));
+                return item;
+            })
+        );
     };
 
     return (
         <div className="todo">
-            <li className="todo-item">{ text }</li>
+            <li className={`todo-item ${todo.completed ? "completed" : ""}`}>
+                {text}
+            </li>
             <button onClick={completeHandler} className="complete-btn">
                 <i className="fas fa-check"></i>
             </button>
