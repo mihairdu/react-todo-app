@@ -2,143 +2,149 @@
 Initial css styling from todo-list-1 project.
 */
 
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-  background-image: linear-gradient(90deg, #ffd700, #f24000);
-  color: white;
-  font-family: "Sedgwick Ave", "Lora", sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+body {
+    background-image: linear-gradient(90deg, #ffd700, #f24000);
+    color: white;
+    font-family: "Sedgwick Ave", "Lora", sans-serif, "Segoe UI", Tahoma, Geneva,
+        Verdana, sans-serif;
+    min-height: 100vh;
 }
 
 header {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
-header,form {
-  min-height: 20vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;;
+header,
+form {
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-form input, form button {
-  font-family: "Sedgwick Ave", "Lora", sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  border: none;
-  background: white;
+form input,
+form button {
+    font-family: "Sedgwick Ave", "Lora", sans-serif, "Segoe UI", Tahoma, Geneva,
+        Verdana, sans-serif;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: white;
 }
 
 form button {
-  color: #f24000;
-  background-color: white;
-  cursor: pointer;
-  transition: all 0.5s ease;
+    color: #f24000;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.5s ease;
 }
 
 form button:hover {
-  background: #f24000;
-  color: white;
+    background: #f24000;
+    color: white;
 }
 
 .todo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .todo-list {
-  min-width: 30%;
-  list-style: none;
+    min-width: 30%;
+    list-style: none;
 }
 
 .todo {
-  margin: 0.3rem;
-  background: white;
-  color: black;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  transition: all 0.5s ease;
+    margin: 0.3rem;
+    background: white;
+    color: black;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.5s ease;
 }
 
 .todo li {
-  flex: 1;
+    flex: 1;
 }
 
-.trash-btn, .complete-btn {
-  background: #f24000;
-  color: white;
-  border: none;
-  padding: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
+.trash-btn,
+.complete-btn {
+    background: #f24000;
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
 }
 
 .complete-btn {
-  background: rgb(21, 231, 21);
+    background: rgb(21, 231, 21);
 }
 
 .trash-btn {
-  background: red;
+    background: red;
 }
 
 .todo-item {
-  padding: 0rem 0.5rem;
+    padding: 0rem 0.5rem;
 }
 
-.fa-trash, .fa-check {
-  pointer-events: none;
+.fa-trash,
+.fa-check {
+    pointer-events: none;
 }
 
 .completed {
-  text-decoration: line-through;
-  opacity: 0.5;
+    text-decoration: line-through;
+    opacity: 0.5;
 }
 
 .fall {
-  transform: translateY(8rem) rotateZ(30deg);
-  opacity: 0;
+    transform: translateY(8rem) rotateZ(30deg);
+    opacity: 0;
 }
 
 select {
-  font-family: "Sedgwick Ave", "Lora", sans-serif;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  outline: none;
-  border: none;
-  background: white;
-  color:#f24000;
-  width: 10rem;
-  cursor: pointer;
-  padding: 1rem;
+    font-family: "Sedgwick Ave", "Lora", sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    background: white;
+    color: #f24000;
+    width: 10rem;
+    cursor: pointer;
+    padding: 1rem;
 }
 
-.select { 
-  margin: 1rem;
-  position: relative;
-  overflow: hidden;
+.select {
+    margin: 1rem;
+    position: relative;
+    overflow: hidden;
 }
 
 .select::after {
-  content: "\25BC";
-  position: absolute;
-  background: #f24000;
-  top: 0;
-  right: 0;
-  padding: 1rem;
-  pointer-events: none;
-  transition: all 0.3s ease;
+    content: "\25BC";
+    position: absolute;
+    background: #f24000;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    pointer-events: none;
+    transition: all 0.3s ease;
 }
 
 .select:hover::after {
-  background: white;
-  color: #f24000;
+    background: white;
+    color: #f24000;
 }
